@@ -16,7 +16,8 @@ TARGET="helloworld"
 all:
 	cc -O -gdwarf-2  -I../lib -o ${TARGET} main.c ${LIBS}
 	cc -O -gdwarf-2  -I../lib -o ${TARGET}_epoll main_epoll.c ${LIBS}
+	cc -O -gdwarf-2  -I../lib -o blue5_ffstack_epoll blue5_proxy.c ${LIBS}
 
 .PHONY: clean
 clean:
-	rm -f *.o ${TARGET} ${TARGET}_epoll
+	rm -f *.o ${TARGET} ${TARGET}_epoll blue5_ffstack_epoll
